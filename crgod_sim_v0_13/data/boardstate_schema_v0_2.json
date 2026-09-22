@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CR-God BoardState v0.2",
+  "type": "object",
+  "required": ["tick", "time_s", "phase", "players", "entities", "projectiles", "done", "winner"],
+  "properties": {
+    "tick": {"type": "integer"},
+    "time_s": {"type": "number"},
+    "phase": {"enum": ["normal", "double", "triple"]},
+    "players": {"type": "object"},
+    "entities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "owner", "kind", "x", "y", "hp", "max_hp", "transport", "is_evolved", "status", "special"]
+      }
+    },
+    "projectiles": {"type": "array"},
+    "done": {"type": "boolean"},
+    "winner": {"type": ["string", "null"]}
+  }
+}

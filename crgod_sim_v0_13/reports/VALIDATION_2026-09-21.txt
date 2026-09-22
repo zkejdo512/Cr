@@ -1,0 +1,18 @@
+CR-God Simulator v0.4 validation
+
+Automated tests: 23/23 PASS
+Masked-action stress: 8/8 matches completed
+Stress ticks: 44,232
+Illegal masked actions: 0
+Non-finite entity values: 0
+Observed stress throughput on validation host: ~1,619 ticks/s
+
+CPU REINFORCE sanity gate:
+- initial deterministic success: 0.500
+- final deterministic success: 1.000
+- seeds tested: 1,2,3,4,5
+- final success for all five seeds: 1.000
+
+Interpretation:
+Training plumbing closes correctly and masked-action runtime is stable in this test.
+This is not a claim of 1:1 live-game fidelity or full-game self-play convergence.
